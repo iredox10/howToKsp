@@ -5,6 +5,10 @@ const user = new mongoose.Schema({
         type: String,
         required: true
     },
+    username: {
+        type: String,
+        required: true
+    },
     email:{
         type: String,
     },
@@ -20,7 +24,12 @@ const user = new mongoose.Schema({
     guest:{
         type: Boolean,
         default: false
-    }
+    },
+    comments: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'comment'
+    }],
+    favorites: Array 
 })
 
 const User = mongoose.model('user', user)

@@ -15,7 +15,11 @@ const howTo = new mongoose.Schema({
    desc:{
     type: String, 
     required:true
-   }, 
+   },
+   comments: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'comment'
+    }], 
 },{timestamps:true})
 
 howTo.pre('save', function(){
