@@ -9,6 +9,14 @@ const comment = new mongoose.Schema({
         type: String,
         required: true
     },
+    replies: [{
+        user: String,
+        comment: String,
+        replies: [{
+            user: String,
+            comment:String
+        }]
+    },{timestamps:true}]
 },{timestamps:true})
 
 const Comment = mongoose.model('comment',comment)

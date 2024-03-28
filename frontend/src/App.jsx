@@ -7,6 +7,7 @@ import AdminCategory from "./pages/AdminCategory";
 import Category from "./pages/Category";
 import HowTo from "./pages/HowTo";
 import Register from "./pages/Register";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path="/category/:slug" element={<Category />} />
 
         <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
